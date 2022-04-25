@@ -11,5 +11,5 @@ A full background to the project can be found [here](https://drive.google.com/fi
 - A multitude of indirect data sources could be used to infer emissions 
 - Graph representation learning is a way of propagating emission estimates through a network based on multimodal data input
 
-## Repository structure
-[LCA_data.ipynb](https://github.com/luke-scot/emissions-tracking/blob/main/LCA_data.ipynb) walks through extracting data from EcoInvent and using this to estimate supply chain emissions.
+## Demo
+For an initial project overview open [project_overview_colab.ipynb in Colab](https://colab.research.google.com/github/luke-scot/emissions-tracking/blob/main/notebooks/data-extraction/project_overview_colab.ipynb#scrollTo=mRCUZz84DZgI).
