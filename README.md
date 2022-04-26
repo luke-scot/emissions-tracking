@@ -12,4 +12,4 @@ A full background to the project can be found [here](https://drive.google.com/fi
 - Graph representation learning is a way of propagating emission estimates through a network based on multimodal data input
 
 ## Demo
-For an initial project overview [open project_overview_colab.ipynb in Colab](https://colab.research.google.com/github/luke-scot/emissions-tracking/blob/main/notebooks/data-extraction/project_overview_colab.ipynb#scrollTo=mRCUZz84DZgI).
+For an initial project overview [open project_overview_colab.ipynb in Colab](https://colab.research.google.com/github/luke-scot/emissions-tracking/blob/main/notebooks/project_overview_colab.ipynb#scrollTo=mRCUZz84DZgI).
