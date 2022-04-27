@@ -15,12 +15,13 @@ class LCA(object):
                 raw = pd.read_csv(filepath)
             except FileNotFoundError:
                 print(filepath+' not found')
+                raise
             self.data = self.data.append(raw[['name', 'location', 'CO2e']][~raw['generalComment'].str.contains('market')].sort_values('name'))
         self.data_path = data_path
 
     def location(self, location='Global'):
         """Filter entries for EcoInvent regions"""
-        loc_filepath = self.data_path+"EcoInvent\EcoInvent_locations.csv"
+        loc_filepath = self.data_path+"EcoInvent/EcoInvent_locations.csv"
         loc_codes = pd.read_csv(loc_filepath)
         region_code = loc_codes['Code'][np.where(loc_codes['Name'] == location)[0]].iloc[0]
         rows = []
