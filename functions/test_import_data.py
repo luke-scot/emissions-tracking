@@ -15,7 +15,6 @@ class LCATests(unittest.TestCase):
 
     def test_LCA_location(self):
         filt_locs = id.LCA("C:/Users/lshc3/Documents/", ['Basic_chemicals_201','Coke_Petro_19']).location('France')
-        print(set(filt_locs['location']))
         self.assertTrue(set(filt_locs['location']).issubset(['GLO','RoW','FR']), 'Location filter returns unwanted locations')
 
 class IHSDataTests(unittest.TestCase):
