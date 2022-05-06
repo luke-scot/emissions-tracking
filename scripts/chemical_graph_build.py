@@ -18,6 +18,5 @@ icis = impData.ICISData("C:\ICIS_data/US_allchemicals.xlsx")
 plants = preproc.format_icis(icis, 2019)
 merged_data = preproc.merge_chemical_data(lca,ihs,plants)
 
-# Output to feather
-#merged_data.columns = [str(i) for i in merged_data.columns]
+# Output to csv
 merged_data.to_csv(out_file)
