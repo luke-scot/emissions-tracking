@@ -5,13 +5,16 @@ import numpy as np
 import pandas as pd
 from fuzzywuzzy import fuzz
 
+
 def left_merge(df1, df2, col1, col2):
     return pd.merge(df1, df2, left_on=df1[col1].str.lower(), right_on=df2[col2].str.lower(), how="left").reset_index(drop=True).drop('key_0',axis=1)
+
 
 def format_icis(icis,year=2019):
     plants_clean = icis.plants.drop(columns=['#','DERIVATIVE','NOTE','@','@Sub','Region']+list(filter(lambda i: 'None' in str(i) or (type(i) is int and i!=year), icis.plants.columns)))
     plants_working = plants_clean[plants_clean[year] != '-'].reset_index(drop=True)
     return plants_working
+
 
 def merge_chemical_data(lca, ihs, plants):
     """Add EcoInvent LCA data and IHS materials data to ICIS plant data dataframe"""
